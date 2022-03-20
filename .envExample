@@ -9,3 +9,13 @@ API_NAME = Example API
 URL_DEV = http://localhost
 PROTOCOL = http
 PORT = 3031
+
+#database configs
+DBUSER = root
+DBPASS_PRD = 
+DBPASS_DEV = 
+DBDATABASE_PRD = database_production
+DBDATABASE_DEV = database_production
+DBHOST_PRD = 127.0.0.1
+DBHOST_DEV = 127.0.0.1
+DBDIALECT = mysql

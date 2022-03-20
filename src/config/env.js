@@ -1,7 +1,6 @@
 require('dotenv').config()
 var args = process.argv.slice(2);
 
-
 function dev() {
     return {
         env: process.env.ENV_DEV || 'development',                
@@ -13,12 +12,13 @@ function dev() {
         apiUrl: require('ip').address() || process.env.URL,
         apiPort: process.env.PORT || '3030',
         dataConfig: {
-            dialect: 'mysql',
-            dialectOptions: {
-                useUTC: false
-            },
-            storage: './database.sqlite3'
-        }                 
+            username: process.env.DBUSER,
+            password: process.env.DBPASS_DEV,
+            database: process.env.DBDATABASE_DEV,
+
+            host: process.env.DBHOST_DEV,
+            dialect: process.env.DBDIALECT,
+        }                
     }
 }
 
@@ -31,16 +31,17 @@ function prod() {
         apiName: process.env.API_NAME || 'Api Example',
         apiProtocol: process.env.PROTOCOL || 'http',
         apiUrl: require('ip').address(),
-        apiPort: process.env.PORT || '9000',
+        apiPort: process.env.PORT || '3030',
         dataConfig: {
-            dialect: 'mysql',
-            dialectOptions: {
-                useUTC: false
-            },
-            storage: './database.sqlite3'
-        }                 
+            username: process.env.DBUSER,
+            password: process.env.DBPASS_PRD,
+            database: process.env.DBDATABASE_PRD,
+            host: process.env.DBHOST_PRD,
+            dialect: process.env.DBDIALECT,
+        }             
     }
 }
+
 
 if(args.length > 0)
 { 
