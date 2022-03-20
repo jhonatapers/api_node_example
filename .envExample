@@ -1,0 +1,11 @@
+ENV_DEV = development
+ENV_PRD = production
+
+SECRET_DEV = 123456
+SECRET_PRD = 123456
+
+API_NAME = Example API
+
+URL_DEV = http://localhost
+PROTOCOL = http
+PORT = 3031
