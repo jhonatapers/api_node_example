@@ -3,9 +3,9 @@ const responseModel = require('../models/ResponseModel')
 
 module.exports = {
 
-    async sameText(req, res){
+    async helloWorld(req, res){
         let response = {...responseModel}
-        
+                
         return json(response)
     }
 

@@ -1,8 +1,7 @@
 const router = require('express').Router()
 
 //Routes 
-const appRoute = require('AppRoute')
-
+const appRoute = require('./AppRoutes')
 
 //Use Routes
 router.use('/appRoute', appRoute);
