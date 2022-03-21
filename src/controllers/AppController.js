@@ -5,7 +5,7 @@ module.exports = {
 
     async helloWorld(req, res){
         let response = {...responseModel}
-                
+
         return json(response)
     }
 
